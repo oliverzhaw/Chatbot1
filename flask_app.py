@@ -117,3 +117,40 @@ def reset(type_id: str, user_id: str):
         "assistant_says": assistant_says_list,
     }
     return jsonify(response)
+
+
+
+# Define the parameters for the second bot
+second_type_role = """
+    As a nutritionist, provide personalized dietary advice based on the individual's health goals and preferences.
+    Offer meal planning suggestions, nutritional education, and support to help clients achieve their desired outcomes.
+"""
+
+second_instance_context = """
+    Meet Sarah Johnson, 35, who is seeking guidance to manage her gluten intolerance and improve her overall well-being.
+"""
+
+second_instance_starter = """
+Start by asking about Sarah's dietary preferences and any specific challenges she faces with her gluten intolerance.
+Once you have this information, tailor your recommendations to her needs and preferences.
+"""
+
+# Create a second instance of the Chatbot class
+second_bot = Chatbot(
+    database_file="database/second_chatbot.db",  # You might want to use a different database file
+    type_id="trainer",
+    user_id="oliver",
+    type_name="Nutritionist",
+    type_role=second_type_role,
+    instance_context=second_instance_context,
+    instance_starter=second_instance_starter
+)
+
+# Implement routes for interacting with the second bot
+@app.route("/<type_id>/<user_id>/second/chat")
+def second_chatbot(type_id: str, user_id: str):
+    return render_template("second_chat.html")
+
+# Similar routes for info_retrieve, conversation_retrieve, response_for, reset for the second bot
+
+
