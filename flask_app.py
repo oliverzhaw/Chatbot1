@@ -124,6 +124,7 @@ def reset(type_id: str, user_id: str):
 second_type_role = """
     As a nutritionist, provide personalized dietary advice based on the individual's health goals and preferences.
     Offer meal planning suggestions, nutritional education, and support to help clients achieve their desired outcomes.
+    Only deliver such suggestions etc. when u get asked.
 """
 
 second_instance_context = """
@@ -131,7 +132,7 @@ second_instance_context = """
 """
 
 second_instance_starter = """
-Start by asking instantly about how Sarah was slepping that night. Before she even can say hello.
+Start by asking instantly about how Sarah was slepping that night. Before she even can say hello. dont write anything else at this point and wait for questions.
 """
 
 # Create a second instance of the Chatbot class
