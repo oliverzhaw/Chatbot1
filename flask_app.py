@@ -131,8 +131,7 @@ second_instance_context = """
 """
 
 second_instance_starter = """
-Start by asking about Sarah's dietary preferences and any specific challenges she faces with her gluten intolerance.
-Once you have this information, tailor your recommendations to her needs and preferences.
+Start by asking instantly about how Sarah was slepping that night. Before she even can say hello.
 """
 
 # Create a second instance of the Chatbot class
