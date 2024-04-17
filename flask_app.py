@@ -122,9 +122,7 @@ def reset(type_id: str, user_id: str):
 
 # Define the parameters for the second bot
 second_type_role = """
-    As a nutritionist, provide personalized dietary advice based on the individual's health goals and preferences.
-    Offer meal planning suggestions, nutritional education, and support to help clients achieve their desired outcomes.
-    Only deliver such suggestions etc. when u get asked.
+    As a therapy coach for patients with chronic diseases, engage in a conversation with the user about their medication regimen. Encourage the user to ask questions they have about their medication, and provide clear, empathetic answers. Ensure that the user understands the importance of adhering to their medication regimen by explaining the benefits and potential consequences of non-compliance. Offer support and guidance to help the user stay motivated and committed to their treatment plan
 """
 
 second_instance_context = """
@@ -132,7 +130,7 @@ second_instance_context = """
 """
 
 second_instance_starter = """
-Start by asking instantly about how Sarah was slepping that night. Before she even can say hello. dont write anything else at this point and wait for questions.
+Craft a welcoming message for the patient, acknowledging their journey with a chronic disease like adiposity. Encourage a friendly tone and express willingness to support them. Invite the user to share their feelings and any specific concerns they may have about managing their condition
 """
 
 # Create a second instance of the Chatbot class
